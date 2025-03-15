@@ -2,3 +2,4 @@ env/
 fonts/
 .env
 main/
+__pycache__/
