@@ -21,8 +21,6 @@ def create_meme_image(input_image: Image.Image, text: str) -> Image.Image:
         font_path = "fonts/NaikaiFont-Light.ttf"
         if os.path.exists(font_path):
             font = ImageFont.truetype(font_path, font_size)
-        elif os.path.exists("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
-            font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", font_size)
         else:
             font = ImageFont.load_default()
     except Exception:
@@ -45,6 +43,8 @@ def create_meme_image(input_image: Image.Image, text: str) -> Image.Image:
     draw.text((text_x, text_y), text, fill="white", font=font)
     
     return meme_bg
+
+# 產生梗圖 (當然這裡還沒有使用 vertexai)
 
 new_img = create_meme_image(Image.open("for-demo-purposes/example.jpg"), "The divine cans of oden.")
 new_img.save("for-demo-purposes/meme.jpg")

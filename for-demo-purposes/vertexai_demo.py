@@ -10,7 +10,7 @@ vertexai.init(project=os.getenv('PROJECTID'), location=os.getenv('REGION'))
 model = GenerativeModel(model_name="gemini-2.0-flash-001")
 
 vertex_image = Image.load_from_file("for-demo-purposes/example.jpg")
-prompt = "這張照片主要是風景、人像還是物體？只回答類別名稱。"
+prompt = "幫我簡單敘述一下這張圖片。"
 
 response = model.generate_content([Part.from_image(vertex_image), prompt])
 result_text = response.text.strip()
