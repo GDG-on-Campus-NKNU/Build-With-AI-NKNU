@@ -46,6 +46,6 @@ def create_meme_image(input_image: Image.Image, text: str) -> Image.Image:
 
 # 產生梗圖 (當然這裡還沒有使用 vertexai)
 
-new_img = create_meme_image(Image.open("for-demo-purposes/example.jpg"), "The divine cans of oden.")
+new_img = create_meme_image(Image.open("for-demo-purposes/example.jpg"), "Hello, World!")
 new_img.save("for-demo-purposes/meme.jpg")
 new_img.show()

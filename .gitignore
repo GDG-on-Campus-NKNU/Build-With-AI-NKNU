@@ -1,6 +1,4 @@
 env/
 fonts/
 .env
-main/
 __pycache__/
-entry.py
